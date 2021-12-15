@@ -1,0 +1,128 @@
+      /* para que se vea bien en cualquier ventana,
+      requisito para que la página sea responsiva */
+    * {
+      box-sizing: border-box;
+    }
+
+  
+    body {
+      font-family: Arial;
+      padding: 10px;
+      background: #f1f1f1;
+    }
+    
+
+    .socials{
+      width: 30px;
+      margin-right: 10px;
+    }
+    /* Header/Blog Title */
+    .header {
+      padding: 30px;
+      text-align: center;
+      background: white;
+    }
+    
+    .header h1 {
+      font-size: 50px;
+    }
+    
+    /* Style the top navigation bar */
+    .topnav {
+      overflow: hidden; /* evitar que se descuadre */
+      background-color: #333;
+    }
+    
+    /* Style the topnav links */
+    .topnav a {
+      float: left;
+      display: block; /*agrupar elementos */
+      color: red;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    
+    /* Change color on hover */
+    .topnav a:hover { /* pseudoclase hover */
+      background-color: #ddd;
+      color: blue;
+    }
+    
+    /* Create two unequal columns that floats next to each other */
+    /* Left column */
+    .leftcolumn {   
+      float: left;
+      width: 75%;
+    }
+    
+    /* Right column */
+    .rightcolumn {
+      float: left;
+      width: 25%;
+      background-color: #f1f1f1;
+      padding-left: 20px;
+    }
+    
+   
+    
+    /* Add a card effect for articles */
+    .card {
+      background-color: beige;
+      padding: 20px;
+      margin-top: 20px;
+    }
+    
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    
+    /* Footer */
+    .footer {
+      padding: 20px;
+      text-align: center;
+      background: coral;
+      margin-top: 20px;
+    }
+    .fakeimg{
+      width:250px;
+    }
+    .profileimg{
+      width:100%;
+    }
+    .valimg{
+      margin-top: -17px;
+      width:50px;
+      float:left;
+    }
+    /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 800px) {
+
+      .leftcolumn, .rightcolumn {   
+        width: 100%;
+        padding: 0;
+      }
+
+      body {
+          background-color: black;
+      }
+
+    }
+    
+    /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+    @media screen and (max-width: 700px) {
+      
+        .topnav a {
+        float: none;
+        width: 100%;
+      }
+
+      body {
+          background-color: crimson;
+      }
+
+    }
+ 

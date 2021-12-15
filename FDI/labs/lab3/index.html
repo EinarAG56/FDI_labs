@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <title>Croque Madame</title>
+        <script>
+            /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
+            function openNav() {
+                var width = window.innerWidth
+                            || document.documentElement.clientWidth
+                            || document.body.clientWidth;
+                            console.log(width);
+            document.getElementById("mySidenav").style.width = "250px";
+            if(width > 560){
+                document.getElementById("main").style.marginLeft = "200px";}
+            }
+
+            /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+            function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+            }
+        </script>
+        
+    </head>
+    
+    <body>
+        <div id="fb-root"></div>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v12.0&appId=390288696076350&autoLogAppEvents=1" nonce="otAKGf5U"></script>
+        
+        <main>
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="../lab1/index.html">Biografia</a>
+                <a href="../lab2/index.html">Los Claxons</a>
+                <a href="../lab3/index.html">Croque Madame</a>
+                <a href="../lab4/index.html">CV</a>
+            </div>
+            <!-- Use any element to open the sidenav -->
+            <span onclick="openNav()"><img class="menuImg" src="../../img/menu.png" alt="menuImg"></span>
+            <br>
+            <br>
+            <div id="main">
+                <div id="header">
+                    <h1>Croque Madame</h1>
+                    <nav class="nav-bar">
+                        <ul class="nav-item">
+                            <li>
+                                <a class="nav-link" href="index.html">Tutorial</a>
+                            </li>
+                        </ul>
+                        <ul class="nav-item">
+                            <li>
+                                <a class="nav-link"  href="ingredientes.html">Ingredientes</a>
+                            </li>
+                        </ul>
+                        <ul class="nav-item">
+                            <li>
+                                <a class="nav-link" href="receta.html">Receta</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="descripcion">
+                Dificultad: Fácil<br>
+                Tiempo de preparación: 20min
+            </div>
+            <br>
+        <div style="text-align:center">
+            <iframe src="https://drive.google.com/file/d/1Ay2wvpo_51T5YGNEYElNZQBcMRGDjmmI/preview" width="640" height="480" allow="autoplay"></iframe>
+        </div>
+        <div class="comment">
+            <div class="fb-comments" data-href="https://a01350870.000webhostapp.com/labs/lab3/index.html" data-width="100%" data-numposts="5"></div>
+        </div>
+
+        
+        <br>
+        </main>
+        <footer>
+            <p>
+                Einar Arvizu Gil<br>
+                A01350870<br>
+                Interfaces Interactivas
+            </p>
+        </footer>
+
+    </body>
+
+</html>

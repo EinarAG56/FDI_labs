@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <title>Croque Madame</title>
+        <script>
+            /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
+            function openNav() {
+                var width = window.innerWidth
+                            || document.documentElement.clientWidth
+                            || document.body.clientWidth;
+                            console.log(width);
+            document.getElementById("mySidenav").style.width = "250px";
+            if(width > 560){
+                document.getElementById("main").style.marginLeft = "200px";}
+            }
+
+            /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+            function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+            }
+        </script>
+        
+    </head>
+    
+    <body>
+        
+        <main>
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="../lab1/index.html">Biografia</a>
+                <a href="../lab2/index.html">Los Claxons</a>
+                <a href="../lab3/index.html">Croque Madame</a>
+                <a href="../lab4/index.html">CV</a>
+            </div>
+            <!-- Use any element to open the sidenav -->
+            <span onclick="openNav()"><img class="menuImg" src="../../img/menu.png" alt="menuImg"></span>
+            <br>
+            <br>
+            <div id="main">
+                <div id="header">
+                    <h1>Croque Madame</h1>
+                    <nav class="nav-bar">
+                        <ul class="nav-item">
+                            <li>
+                                <a class="nav-link" href="index.html">Tutorial</a>
+                            </li>
+                        </ul>
+                        <ul class="nav-item">
+                            <li>
+                                <a class="nav-link"  href="ingredientes.html">Ingredientes</a>
+                            </li>
+                        </ul>
+                        <ul class="nav-item">
+                            <li>
+                                <a class="nav-link" href="receta.html">Receta</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="imgReceta">
+                    <img style="width:100%;"src="img/ingredientes.jpg" alt="ingredientes"/>
+                </div>
+                <div class="descripcion">
+                    Un delicioso sandwich proveniente del croque monsieur, con un un huevo frito encima. 
+                    Éste sandwich tiene una capa de jamón, queso, un pan crujiente. 
+                    Cubierto con una tradicional salza de bechamel o alguna salza casera.
+                </div>
+                <br>
+                <div class="descripcion">
+                    <h4>INGREDIENTES</h4>
+                    <b>CROQUE MONSIEUR<b><br>
+                        2 rebanadas depan brioche<br>
+                        2 cucharadas de mantequilla<br>
+                        1 rebanada de jamón <br>
+                        1 rebanada de queso <br>
+                        1 rebanada de queso rayado<br><br>
+                    <b>Huevo<b><br>
+                        1 cucharada de mantequilla<br>
+                        2 huevos grandes <br>
+                        pimienta al gusto <br>
+                </div>
+            </div>
+            <br>
+        </main>
+        <footer>
+            <p>
+                Einar Arvizu Gil<br>
+                A01350870<br>
+                Interfaces Interactivas
+            </p>
+        </footer>
+
+    </body>
+
+</html>

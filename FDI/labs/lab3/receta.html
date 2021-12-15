@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <title>Croque Madame</title>
+        <script>
+            /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
+            function openNav() {
+                var width = window.innerWidth
+                            || document.documentElement.clientWidth
+                            || document.body.clientWidth;
+                            console.log(width);
+            document.getElementById("mySidenav").style.width = "250px";
+            if(width > 560){
+                document.getElementById("main").style.marginLeft = "200px";}
+            }
+
+            /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+            function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+            }
+        </script>
+        
+    </head>
+    
+    <body>
+        
+        <main>
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="../lab1/index.html">Biografia</a>
+                <a href="../lab2/index.html">Los Claxons</a>
+                <a href="../lab3/index.html">Croque Madame</a>
+                <a href="../lab4/index.html">CV</a>
+            </div>
+            <!-- Use any element to open the sidenav -->
+            <span onclick="openNav()"><img class="menuImg" src="../../img/menu.png" alt="menuImg"></span>
+            <br>
+            <br>
+            <div id="main">
+                <div id="header">
+                    <h1>Croque Madame</h1>
+                    <nav class="nav-bar">
+                        <ul class="nav-item">
+                            <li>
+                                <a class="nav-link" href="index.html">Tutorial</a>
+                            </li>
+                        </ul>
+                        <ul class="nav-item">
+                            <li>
+                                <a class="nav-link"  href="ingredientes.html">Ingredientes</a>
+                            </li>
+                        </ul>
+                        <ul class="nav-item">
+                            <li>
+                                <a class="nav-link" href="receta.html">Receta</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="imgReceta">
+                <img style="width:100%;"src="img/croqueMadame.jpg" alt="croqueMadame"/>
+            </div>
+        <div class="descripcion">
+            <h4>TIEMPO DE PREPARACIÓN</h4><br>
+            CROQUER MONSIEUR: <b class="tiempo">0</b> HORAS <b class="tiempo">12</b> MINUTOS<br>
+            HUEVO: <b class="tiempo">0</b> HORAS <b class="tiempo">8</b> MINUTOS<br>
+            TIEMPO TOTAL: <b class="tiempo">0</b> HORAS <b class="tiempo">20</b> MINUTOS
+        </div>
+        <br>
+        <div class="descripcion">
+            <h4>PREPARACIÓN</h4><br>
+            <b class="instruccion"> 1 </b><b class="line">|</b> Deja calentar la plancha a fuego lento. 
+            Unta mantequilla y deja que se derrita. Pon los panes en la plancha y deja que calienten sin dejar
+            que queden tostados.<br>
+            <b class="instruccion"> 2 </b><b class="line">|</b> Voltea una rebanada de pan y agrega la rebanada de
+            queso en medio y tápalo con el lado caliente de la otra rebanada. Vóltea el sandwich cuando el pan empiece
+            a tostar y espera a que el queso se derrita.<br>
+            <b class="instruccion"> 3 </b><b class="line">|</b> Deja calentar el sárten a fuego medio. Unta mantequilla
+            y deja que se derrita. Pon a freir los huevos hasta que queden blancos. Sazonalos con sal y pimienta al gusto.<br>
+            <b class="instruccion"> 4 </b><b class="line">|</b> Unta la sálsa de bechamel o la de tu preferencia encima del 
+            sandwich. Espolvorea el queso rayado y luego cubre con los huevos fritos. 
+        </div>
+        <br>
+        </main>
+        
+        <footer>
+            <p>
+                Einar Arvizu Gil<br>
+                A01350870<br>
+                Interfaces Interactivas
+            </p>
+        </footer>
+
+    </body>
+
+</html>

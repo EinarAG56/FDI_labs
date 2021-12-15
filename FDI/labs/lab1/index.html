@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <title>Mi biografia</title>
+        <script>
+            /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
+            function openNav() {
+                var width = window.innerWidth
+                            || document.documentElement.clientWidth
+                            || document.body.clientWidth;
+                            console.log(width);
+            document.getElementById("mySidenav").style.width = "250px";
+            if(width > 560){
+                document.getElementById("main").style.marginLeft = "200px";}
+            }
+
+            /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+            function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+            }
+        </script>
+        
+    </head>
+    
+    <body>
+        <header>
+            <h1>Mi Biografía</h1>
+            <nav class="nav-bar">
+                <ul class="nav-item">
+                    <li>
+                        <a class="nav-link" href="../index.html">Labs</a>
+                    </li>
+                </ul>
+                <ul class="nav-item">
+                    <li>
+                        <a class="nav-link"  href="">Personal</a>
+                    </li>
+                </ul>
+                <ul class="nav-item">
+                    <li>
+                        <a class="nav-link" href="https://docs.google.com/document/d/1yZDZUHMZrOZCOY1eJKOCt-bdlvQ6nkFGh8eTbhjf_NA/edit?usp=sharing" target="_blank">Final</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="../lab1/index.html">Biografia</a>
+                <a href="../lab2/index.html">Los Claxons</a>
+                <a href="../lab3/index.html">Croque Madame</a>
+                <a href="../lab4/index.html">CV</a>
+            </div>
+            <!-- Use any element to open the sidenav -->
+            <span onclick="openNav()"><img class="menuImg" src="../../img/menu.png" alt="menuImg"></span>
+
+            <div id="main">
+                <div class="info">
+                    <div class="img"><img src="img/einar.png" alt="Einar"></div>
+                    <div class="quick-info">
+                        <div>
+                            <h3>DATOS</h3>
+                        </div>
+                        <div class="quick-div">
+                            <p class="quick-title">Nombre</p>
+                            <p class="quick-data">Einar Arvizu Gil</p>
+                        </div>
+                        <div class="quick-div">
+                            <p class="quick-title">Fecha de Nacimiento</p>
+                            <p class="quick-data">15 de Febrero 1998<br>(23 años)</p>
+                            
+                        </div>
+                        <div class="quick-div">
+                            <p class="quick-title">Lugar de Nacimiento</p>
+                            <p class="quick-data">Distrito Federal</p>
+                        </div>
+                        <div class="quick-div">
+                            <p class="quick-title">Educación</p>
+                            <p class="quick-data">Tec de Monterrey</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="data">
+                    <div class="basic-info">
+                        <h2>Einar Arvizu Gil</h2>
+                        <p>(1998-)</p><hr>
+                        <a  href="https://www.fb.com/einar.arvizu"><img class="socials" src="img/fb.png" alt="facebook"></a>
+                        <a  href="https://www.instagram.com/einararvizu"><img class="socials" src="img/instagram.png" alt="instagram"></a>
+                        <a href="https://www.linkedin.com/in/einarag/"><img class="socials" src="img/linkedIn.png" alt="linkedIn"></a>
+                        <p>Einar Arvizu es un estudiante de ingeniería en Sistemas Digitales y Robótica
+                            en el Tecnológico de Monterrey campus Querétaro.</p>
+                    </div>
+                    <div>
+                        <h3>Quién es Einar?</h3>
+                        <p>
+                            Einar Arvizu es un estudiante mexicano que se desarrolla en la ingeniería en software y hardware. 
+                            Es estudiante de 11vo semestre de la ingeniería en Sistemas Digitales y Robótica en el Tec de Monterrey Campus Querétaro.
+                            Desde el 2020 se desempeña en el desarrollo de aplicaciones web y aplicaciones moviles para pequeñas y grandes empresas.
+                        </p>
+                    </div>
+                    <div>
+                        <h3>Vida</h3>
+                        <p>
+                            Einar Arvizu Gil nació en el Distrito Federal, México el 15 de febrero de 1998. Es el tercer hijo de José Arvizu y Pollyanna Gil.
+                            A los 3 años de edad se mudaron a León, Gto donde vivió su niñez. Desde temprana edad aprendió a hablar multiples idiomas como el Inglés 
+                            y Francés, también desarrolló destreza matemática influneciado por sus padres. Para cubrir sus tiempos libres practicaba tae kwan do y
+                            asisitía a los boys scouts.<br>
+                            A los 12 años se volvió a mudar a Irapuato, Gto donde comenzó la secundaria en el Tec de Monterrey. Desde su inició mostró gran interés 
+                            en el fútbol americano, deporte que desempeñó hasta la preparatoria logrando multiples campeonatos y ser seleccionado all-star. Como parte 
+                            de su estadía en el Tec de Monterrey vivó la experiencia de viajar por el mundo y conocer personas de diferentes culturas como los Estados Unidos,
+                            Canada, Francia, España, China, entre otros.<br>
+                            En sus último año escolar empezó a encontrar su pasión por la tecnología tomando la decisión de seguir sus estudios universitarios en Tec de 
+                            Monterrey campus Querétaro en la ingeniería en Sistemas Digitales y Robótica, una carrera que le dejaría una formación para desarrollar 
+                            applicaciones en software y hardware.
+                             
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+            <br>
+            <br>
+
+        </main>
+        <footer>
+            <p>
+                Einar Arvizu Gil<br>
+                A01350870<br>
+                Interfaces Interactivas
+            </p>
+        </footer>
+
+    </body>
+
+</html>

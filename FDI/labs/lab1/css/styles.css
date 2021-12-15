@@ -1,0 +1,158 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+header, footer {
+    width: 100%;
+    background-color: darkseagreen;
+	padding: 10px 0px;
+    text-align: center;
+    position: relative;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+header{
+    font-size: x-large;
+}
+div{
+    display: block;
+}
+img{
+    max-width: 300px;
+    margin-right: 20px;
+    width: auto;
+	height: auto;
+}
+.img{
+    margin-top: 10%;
+}
+main{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #e5e4e1;
+}
+
+.socials{
+    width: 30px;
+    margin-right: 10px;
+}
+.info{
+    float: left;
+    margin-left: 70px;
+}
+.quick-info{
+    border-style: solid;
+    border-color: black;
+    text-align: center;
+    padding: 0px 15px;
+    margin-right: 20px;
+}
+
+.quick-title{
+    font-size: small;
+    color: rgb(88, 88, 88);
+    line-height: 1px;
+}
+
+.data{
+    margin-right: 10%;
+    padding-top: 20px;
+    padding-left: 70px;
+}
+
+nav {
+    z-index:2;
+	top: 50%;
+	left: 50%;
+	text-align: center; 
+}
+nav ul{	
+	margin-left:auto;
+	margin-right: auto;
+	text-align:center;
+	padding: 0;
+	list-style-type: none;
+}
+
+.menuImg{
+    height: 30px;
+    width: auto;
+    float: left;
+}
+
+nav ul li{
+	padding: 10px 15px;
+	font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-bar{
+    list-style-type:none;
+    overflow: hidden;
+    margin: auto;
+    width: 100%;
+}
+.nav-bar{
+    width: 70%;
+}
+.nav-item {
+    float: left;
+}
+.nav-link{
+    font-size : 80%;
+    color: #6F6460;
+    align-self:left;
+    margin-top: 0%;
+    margin-left:3%;
+    text-decoration: none;
+}
+
+.sidenav {
+    height: 100%; 
+    width: 0; 
+    position: absolute; 
+    z-index: 1; 
+    top: 236px; 
+    left: 0;
+    background-color: #a0babe; 
+    overflow-x: hidden; 
+    padding-top: 60px; 
+    transition: 0.5s; 
+    display: table-cell;
+}
+  
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: grey;
+    display: block;
+    transition: 0.3s;
+}
+  
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+  
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+  
+#main {
+    transition: margin-left .5s;
+    padding: 10px;
+}
+  
+  
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+iframe[seamless] {
+    border: none;
+}

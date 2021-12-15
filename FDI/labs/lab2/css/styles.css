@@ -1,0 +1,429 @@
+#main {
+    transition: margin-left .5s;
+    padding: 10px;
+    color: white;
+    background-color: black;
+}
+.releases{
+  font-family: Verdana; 
+  background-color: black; 
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.bandImg{
+    width: 100%;
+    max-height: 600px;
+    height:auto;
+    margin:auto;
+}
+.musica{
+  background-color: white;
+  color: black;
+  padding-top: 30px; 
+  padding-bottom: 30px; 
+  position: relative;
+  
+}
+.about{
+  background-image: url("https://img3.stockfresh.com/files/l/lem/m/45/537594_stock-photo-abstract-musical-background-guitar.jpg"); 
+  background-size: 100%;
+  padding-top: 30px; 
+  padding-bottom: 30px; 
+  position: relative;
+  
+
+}
+.historia{
+  position: relative; 
+  margin-left: 80px;
+  font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono";
+  font-size: 20px;
+  color: black;
+}
+.line{
+  margin-top: 10px;
+  margin-left: 30px;
+  width: 7px;
+  height: 300px;
+  background-color: rgb(130, 238, 253);
+  color: rgb(130, 238, 253);
+}
+.about .line{
+  background-color: rgb(255, 102, 178);
+  color: rgb(255, 102, 178);
+}
+.musica h2, .about h2{
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+
+}
+.newRelease{
+  background-image: url("https://image.freepik.com/free-photo/ocean-banner_64049-266.jpg");
+  width: 480px;
+  height: 140px;
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  padding: 10px;
+  margin:1%;
+
+}
+.newVideo{
+  background-image: url("https://pattyto.com/wp-content/uploads/2021/06/Los-Claxons-Presentan-Nuevo-Sencillo-Y-Video-Sayonara.jpg");
+  background-size: 100%;
+  width: 480px;
+  height: 200px;
+  color: white;
+  font-size: 40px;
+  text-align: center;
+  margin:1%;
+}
+.bandName{
+    width: 98%;
+    margin:auto;
+    margin-top: -40%;
+    text-align: center;
+    background-color: rgba(130, 238, 253, 0.7);
+    color: white;
+    font-family: Trattatello, fantasy ;
+    position: absolute;
+    font-size: 15vw;
+    padding: -10px;
+}
+
+@keyframes tonext {
+  75% {
+    left: 0;
+  }
+  95% {
+    left: 100%;
+  }
+  98% {
+    left: 100%;
+  }
+  99% {
+    left: 0;
+  }
+}
+
+@keyframes tostart {
+  75% {
+    left: 0;
+  }
+  95% {
+    left: -300%;
+  }
+  98% {
+    left: -300%;
+  }
+  99% {
+    left: 0;
+  }
+}
+
+@keyframes snap {
+  96% {
+    scroll-snap-align: center;
+  }
+  97% {
+    scroll-snap-align: none;
+  }
+  99% {
+    scroll-snap-align: none;
+  }
+  100% {
+    scroll-snap-align: center;
+  }
+}
+
+
+* {
+  box-sizing: border-box;
+  scrollbar-color: transparent transparent; /* thumb and track color */
+  scrollbar-width: 0px;
+}
+
+*::-webkit-scrollbar {
+  width: 0;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: transparent;
+  border: none;
+}
+
+* {
+  -ms-overflow-style: none;
+}
+
+ol, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.carousel {
+  position: relative;
+  filter: drop-shadow(0 0 10px #0003);
+  perspective: 100px;
+  text-align: center;
+  height: 500px;
+  width: 500px;
+  align-self: center;
+}
+
+.carouselImg{
+  width: 100%;
+  height: 100%;
+}
+.carousel__viewport {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  overflow-x: scroll;
+  counter-reset: item;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+
+.carousel__slide {
+  position: relative;
+  flex: 0 0 100%;
+  width: 100%;
+  counter-increment: item;
+}
+
+.carousel__slide:before {
+  content: counter(item);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%,-40%,70px);
+  color: #fff;
+  font-size: 2em;
+}
+
+.carousel__snapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 500px;
+  scroll-snap-align: center;
+}
+
+@media (hover: hover) {
+  .carousel__snapper {
+    animation-name: tonext, snap;
+    animation-timing-function: ease;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+
+  .carousel__slide:last-child .carousel__snapper {
+    animation-name: tostart, snap;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .carousel__snapper {
+    animation-name: none;
+  }
+}
+
+.carousel:hover .carousel__snapper,
+.carousel:focus-within .carousel__snapper {
+  animation-name: none;
+}
+
+.carousel__navigation {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+}
+
+.carousel__navigation-list,
+.carousel__navigation-item {
+  display: inline-block;
+}
+
+.carousel__navigation-button {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #333;
+  background-clip: content-box;
+  border: 0.25rem solid transparent;
+  border-radius: 50%;
+  font-size: 0;
+  transition: transform 0.1s;
+}
+
+.carousel::before,
+.carousel::after,
+.carousel__prev,
+.carousel__next {
+  position: absolute;
+  top: 0;
+  margin-top: 48%;
+  width: 4rem;
+  height: 4rem;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  font-size: 0;
+  outline: 0;
+}
+
+.carousel::before,
+.carousel__prev {
+  left: -1rem;
+}
+
+.carousel::after,
+.carousel__next {
+  right: -1rem;
+}
+
+.carousel::before,
+.carousel::after {
+  content: '';
+  z-index: 1;
+  background-color: #333;
+  background-size: 1.5rem 1.5rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: #fff;
+  font-size: 2.5rem;
+  line-height: 4rem;
+  text-align: center;
+  pointer-events: none;
+}
+
+.carousel::before {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='0,50 80,100 80,0' fill='%23fff'/%3E%3C/svg%3E");
+}
+
+.carousel::after {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='100,50 20,100 20,0' fill='%23fff'/%3E%3C/svg%3E");
+}
+
+.nav-bar{
+    list-style-type:none;
+    overflow: hidden;
+    margin: auto;
+    width: 100%;
+}
+.nav-bar{
+    width: 70%;
+}
+.nav-item {
+    float: left;
+}
+.nav-link{
+    font-size : 80%;
+    color: #6F6460;
+    align-self:left;
+    margin-top: 0%;
+    margin-left:3%;
+    text-decoration: none;
+}
+.menuImg{
+    height: 30px;
+    width: auto;
+    float: left;
+}
+.sidenav {
+    height: 100%; 
+    width: 0; 
+    position: absolute; 
+    z-index: 1; 
+    top: 236px; 
+    left: 0;
+    background-color: #a0babe; 
+    overflow-x: hidden; 
+    padding-top: 60px; 
+    transition: 0.5s; 
+    display: table-cell;
+}
+a{
+  text-decoration: none;
+}
+  
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: grey;
+    display: block;
+    transition: 0.3s;
+}
+  
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+  
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+header, footer {
+    width: 100%;
+    background-color: darkseagreen;
+	padding: 10px 0px;
+    text-align: center;
+    position: relative;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+header{
+    font-size: x-large;
+}
+div{
+    display: block;
+}
+
+nav {
+    z-index:2;
+	top: 50%;
+	left: 50%;
+	text-align: center; 
+}
+nav ul{	
+	margin-left:auto;
+	margin-right: auto;
+	text-align:center;
+	padding: 0;
+	list-style-type: none;
+}
+
+
+nav ul li{
+	padding: 10px 15px;
+	font-weight: bold;
+    text-decoration: none;
+}
+  
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+iframe[seamless] {
+    border: none;
+}
